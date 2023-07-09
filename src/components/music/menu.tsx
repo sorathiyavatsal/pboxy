@@ -22,6 +22,7 @@ export function Menu() {
             <MenubarMenu>
                 <MenubarTrigger className="font-bold">Music</MenubarTrigger>
                 <MenubarContent>
+                    <MenubarItem><a href="/dashboard">Music Dashboard</a></MenubarItem>
                     <MenubarItem>About Music</MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem>

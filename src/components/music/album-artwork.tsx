@@ -26,7 +26,7 @@ export function AlbumArtwork({
             <ContextMenu>
                 <ContextMenuTrigger>
                     <div className="overflow-hidden rounded-md">
-                        {/* <Image
+                        <Image
                             src={album?.cover}
                             alt={album?.name}
                             width={width}
@@ -35,7 +35,7 @@ export function AlbumArtwork({
                                 "h-auto w-auto object-cover transition-all hover:scale-105",
                                 aspectRatio === "portrait" ? "aspect-[3/4]" : "aspect-square"
                             )}
-                        /> */}
+                        />
                     </div>
                 </ContextMenuTrigger>
                 <ContextMenuContent className="w-40">
