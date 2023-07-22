@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
+import { Header } from "@/components";
 
 export default function Login() {
     const [loginLoader, setLoginLoader] = useState(false)
@@ -13,10 +14,11 @@ export default function Login() {
     }
 
     return (
-        <main className="min-h-screen">
+        <main className="min-h-full">
+            <Header />
             <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="min-h-screen row-span-2 w-full flex min-h-screen flex-col items-center justify-between">
-                    <div className="hero min-h-screen">
+                <div className="min-h-full row-span-2 w-full flex flex-col items-center justify-between">
+                    <div className="hero min-h-full">
                         <div className="hero-content flex-col lg:flex-row-reverse w-full">
                             <div className="card w-full max-w-xl rounded-lg shadow-2xl bg-base-100 px-10 py-8 mx-auto">
                                 <img className="my-auto h-10 w-10" src="https://training-layers-greenfield-pic.s3.us-west-1.amazonaws.com/clhqar9xz003ipiwuh3rxglye/assets/images/logo/clhqar9xz003ipiwuh3rxglye.png" />
