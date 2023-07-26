@@ -1,6 +1,8 @@
 "use client"
+import Login from "../Modal/login";
 
 export default function Header() {
+
     return (
         <main>
             <div className="navbar bg-base-100">
@@ -28,6 +30,12 @@ export default function Header() {
                         </div>
                     </button>
                 </div>
+                <button className="btn" onClick={() => {
+                    if (window && window?.login_modal) {
+                        window?.login_modal.showModal()
+                    }
+                }}>open modal</button>
+                <Login />
             </div>
             <div className="btm-nav lg:hidden">
                 <button>

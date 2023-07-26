@@ -1,19 +1,41 @@
+"use client"
 import { Header } from '@/components'
+import { useState, useEffect } from 'react';
+import videodata from "./data/video";
 
 export default function Home() {
+
+    const [video, setVideo] = useState({})
+
+    useEffect(() => {
+        setVideo(
+            videodata
+        )
+        // fetchData()
+    }, [])
+
+    // const fetchData = async () => {
+    //     const options = {
+    //         method: 'GET',
+    //         url: 'https://youtube-search-results.p.rapidapi.com/youtube-search/',
+    //         params: { q: 'justin+bieber' },
+    //         headers: {
+    //             'X-RapidAPI-Key': 'H6vywfLbPYmshkubXMaH4P6MaeElp1BcTpdjsn8hHv3bngdDXc',
+    //             'X-RapidAPI-Host': 'youtube-search-results.p.rapidapi.com'
+    //         }
+    //     };
+
+    //     try {
+    //         const response = await axios.request(options);
+    //         console.log(response.data);
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // }
+
     return (
         <main>
             <Header />
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)' }}>
-                <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
-                    </div>
-                </div>
-            </div>
         </main>
     )
 }
